@@ -2,9 +2,141 @@
 <html>
 
 <head>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+<link rel="stylesheet" type="text/css" href="test.css" />
+<style>
+	body {
+		font-family: Nunito;
+		margin-top: 40px;
+	}
+
+	#container {
+		width: 100%;
+		max-width: 1366px;
+		display: grid;
+		grid-template-rows: 50px auto 20px;
+		grid-template-areas:
+			"header"
+			"content"
+			"footer"
+	}
+
+	header {
+		grid-area: header;
+		background: white;
+		color: white;
+		left-margin: auto;
+		right-margin: auto;
+		text-align: center;
+	}
+
+	content {
+		grid-area: content;
+		background: rgb(228,228,228);
+	}
+
+	footer {
+		grid-area: footer;
+		background: white;
+		color: rgb(0,158,219);
+		left-margin: auto;
+		right-margin: auto;
+		text-align: center;
+	}
+
+	.posts {
+		display: grid;
+		grid-template-columns: 450px 450px;
+		grid-gap: 50px;
+		padding-left: 100px;
+		padding-right: 100px;
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+
+	.post {
+		background: white;
+	}
+
+	.post > .feeling {
+		padding-left: 20px;
+		color: black;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.post > .photo {
+		left-margin: auto;
+		right-margin: auto;
+		width: 450px;
+	}
+
+	.post > .comment {
+		color: black;
+	}
+
+	.post > hr {
+		width: 90%;
+		border-color: rgb(200,200,200);
+	}
+</style>
+
 </head>
 
 <body>
 
+<section id="container">
+
+	<header>
+		header area
+		<img src='assets/mps-logo.svg' height=50px>
+	</header>
+
+	<content>
+	    <div class='posts'>
+	        <div class='post'>
+		    	<div class='feeling'><img src='assets/emoji.jpg'>&nbsp;&nbsp;Feeling joyful</div>
+		    	<hr>
+		    	<div class='photo'><img src='assets/charlie.jpg' width=450px></div>
+	    		<div class='comment'>
+	    	    	Went for an amazing walk along the seaside. The sunset was incredible. Very inspiring. What an astounding World we live in. Took this photo ju...
+	    		</div>
+	    	</div>
+
+	    	<div class='post'>
+	    		<div class='feeling'><img src='assets/emoji.jpg'>&nbsp;&nbsp;Feeling positive</div>
+		    	<hr>
+	    		<div class='photo'><img src='assets/jane.jpg' width=450px></div>
+	    		<div class='comment'>
+	    	    	Went for an amazing walk along the seaside. The sunset was incredible. Very inspiring. What an astounding World we live in. Took this photo ju...
+	    		</div>
+	    	</div>
+
+	    	<div class='post'>
+	    		<div class='feeling'><img src='assets/emoji.jpg'>&nbsp;&nbsp;Feeling bored</div>
+		    	<hr>
+	    		<div class='photo'><img src='assets/katie.jpg' width=450px></div>
+	    		<div class='comment'>
+	    	    	Went for an amazing walk along the seaside. The sunset was incredible. Very inspiring. What an astounding World we live in. Took this photo ju...
+	    		</div>
+	    	</div>
+
+	    	<div class='post'>
+	    		<div class='feeling'><img src='assets/emoji.jpg'>&nbsp;&nbsp;Feeling frustrated</div>
+	    		<hr>
+	    		<div class='photo'><img src='assets/vanessa.jpg' width=450px></div>
+	    		<div class='comment'>
+	    	    	Went for an amazing walk along the seaside. The sunset was incredible. Very inspiring. What an astounding World we live in. Took this photo ju...
+	    		</div>
+	    	</div>
+	    </div>
+	</content>
+
+	<footer>
+	    &copy; My Possible Self 2017. All rights reserved
+	</footer>
+</section>
+
 </body>
+
 </html>
